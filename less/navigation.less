@@ -1,1 +1,40 @@
 // Navigation Styles here
+
+#header {
+    max-width: 1000px; 
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    border-bottom: .2rem dashed @navigation-border;
+    padding: 2rem 10rem 3rem 12rem;
+
+    @media only screen and @mobile {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 1rem .5rem;
+
+        
+    }
+    
+    #nav-list {
+        display: flex;
+        justify-content: space-evenly;
+    
+
+        #nav-item {
+            font-size: 1.5rem;
+            
+
+            a {
+                text-decoration: none;
+                color: @font-color;
+            }
+        }
+
+    }
+
+   
+
+}
