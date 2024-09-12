@@ -1,1 +1,516 @@
-/* LESS needs to be processed */
+@keyframes bouncing {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 240px;
+    top: 0;
+  }
+  50% {
+    left: 240px;
+    top: 140px;
+  }
+  75% {
+    left: 0;
+    top: 140px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+/* Animation Codes */
+@keyframes myanimationone {
+  0% {
+    background-color: white;
+    left: -300px;
+    top: 0px;
+    border-radius: 0 0 0 0;
+  }
+  25% {
+    background-color: red;
+    left: 300px;
+    top: 0px;
+    border-radius: 50% 0 0 0;
+  }
+  50% {
+    background-color: green;
+    left: 300px;
+    top: 300px;
+    border-radius: 50% 50% 0 0;
+  }
+  75% {
+    background-color: blue;
+    left: 0px;
+    top: 300px;
+    border-radius: 50% 50% 50% 0;
+  }
+  100% {
+    background-color: white;
+    left: 0px;
+    top: 0px;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+/* H1 Heading Animation */
+@keyframes heading {
+  0% {
+    background-color: red;
+    top: -500px;
+    border-radius: 0 0 0 0;
+    font-size: 5rem;
+  }
+  25% {
+    background-color: #4c00ff;
+    right: -300px;
+    top: -200px;
+    border-radius: 50% 0 0 0;
+    font-size: 8rem;
+  }
+  50% {
+    background-color: green;
+    right: 0px;
+    top: 0px;
+    border-radius: 50% 50% 0 0;
+    font-size: 10rem;
+  }
+  75% {
+    background-color: blue;
+    left: -300px;
+    top: 300px;
+    border-radius: 50% 50% 50% 0;
+    font-size: 5rem;
+  }
+  100% {
+    top: 200px;
+    border-radius: 50% 50% 50% 50%;
+    font-size: 3rem;
+  }
+}
+/* Desitation Animation */
+@keyframes destination {
+  0% {
+    left: -1000px;
+    text-transform: uppercase;
+    color: green;
+  }
+  100% {
+    left: 200px;
+    color: red;
+    text-transform: lowercase;
+    font-size: 5rem;
+  }
+}
+/* Button Transition */
+/* Reset Code and Global Styles*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Indie Flower', cursive;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 10px;
+}
+h4 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+p {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+/* Content Style */
+#header {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  border-bottom: 0.2rem dashed #C0C0C0;
+  padding: 2rem 10rem 3rem 12rem;
+}
+@media only screen and (max-width: 500px) {
+  #header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+}
+#header #nav-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+#header #nav-list #nav-item {
+  font-size: 1.5rem;
+}
+#header #nav-list #nav-item a {
+  text-decoration: none;
+  color: #212529;
+}
+.footer {
+  max-width: 1000px;
+  width: 100%;
+  border-top: 2px dashed silver;
+  background: #FFEBCD;
+  margin: 0 auto 3rem auto;
+}
+.footer p {
+  text-align: center;
+  color: #212529;
+  font-size: 1.6rem;
+  padding: 20px;
+}
+.home .content-header {
+  border-bottom: 0.2rem dashed #C0C0C0;
+  padding-bottom: 2rem;
+}
+.home .content-header h1 {
+  margin: 1.5rem 0;
+  position: relative;
+  animation: heading;
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out;
+}
+@media (max-width: 500px) {
+  .home .content-header h1 {
+    animation: none;
+  }
+}
+.home .content-section {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 500px) {
+  .home .content-section {
+    flex-direction: column;
+  }
+}
+.home .content-section .text-content {
+  width: 48%;
+  padding-right: 1%;
+}
+@media only screen and (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+    padding-right: inherit;
+  }
+}
+.home .content-section .img-content {
+  width: 48%;
+  padding-left: 1%;
+}
+@media only screen and (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+    padding-left: inherit;
+  }
+}
+.home .content-section .img-content img {
+  border-radius: 10px;
+}
+.home .inverse-content {
+  padding-bottom: 30px;
+  border-bottom: 2px dashed #C0C0C0;
+}
+@media only screen and (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
+}
+.home .inverse-content .text-content {
+  padding-left: 1%;
+  padding-right: 0;
+}
+.home .inverse-content .img-content {
+  padding-right: 1%;
+  padding-left: 0;
+}
+.home .content-destination {
+  width: 75%;
+  margin: 0 auto 30px;
+}
+@media only screen and (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+    margin: 0 0 3rem 0;
+  }
+}
+.home .content-destination img {
+  border-radius: 10px;
+}
+.home .content-pick {
+  padding-top: 30px;
+  border-top: 2px dashed #C0C0C0;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 500px) {
+  .home .content-pick {
+    flex-direction: column;
+    padding: 1.5rem 2rem 0 2rem;
+  }
+}
+.home .content-pick .destination {
+  width: 30%;
+  margin-bottom: 30px;
+  position: relative;
+  animation-name: destination;
+  animation-duration: 4s;
+}
+@media only screen and (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 100%;
+    animation: none;
+  }
+}
+.home .content-pick .destination .btn {
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+  background: #ff5722;
+  width: 100%;
+  transition-property: all;
+  transition-duration: 1s, 3s;
+  transition-timing-function: ease-in-out;
+}
+.home .content-pick .destination .btn:hover {
+  cursor: pointer;
+  background: red;
+  border-radius: 50%;
+  text-transform: uppercase;
+}
+.contact-image {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 99999;
+}
+.contact-image img {
+  width: 100%;
+  max-height: 300px;
+}
+.contact-page {
+  background: darkblue;
+  margin-top: -2px;
+  z-index: -2;
+}
+.contact-page h1,
+.contact-page h2 {
+  padding-top: 10%;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  transition: all 4s ease-in-out;
+  font-size: 3.2rem;
+}
+.contact-page form {
+  margin: 15% auto;
+  position: relative;
+  text-align: center;
+  transition: all 4s ease-in-out;
+}
+.contact-page .form-control {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+.contact-page input {
+  height: 4.5rem;
+}
+.contact-page .submit {
+  border-color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 0.2rem;
+  margin-top: 2rem;
+  background: #ff5722;
+  width: 100%;
+  transition-property: all;
+  transition-duration: 1s, 3s;
+  transition-timing-function: ease-in-out;
+}
+.contact-page .submit:hover {
+  cursor: pointer;
+  background: red;
+  border-radius: 50%;
+  text-transform: uppercase;
+}
+.contact-page .custom-select {
+  position: relative;
+  color: #5C5B79;
+}
